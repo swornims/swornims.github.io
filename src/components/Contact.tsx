@@ -35,67 +35,86 @@ export default function Contact() {
   };
 
   return (
-    <div id="connect" className="space-y-6 bg-gray-50 px-30 py-20">
-      <h1 className="text-5xl font-medium mb-10">Connect with Me</h1>
-      <div className="flex w-full gap-20">
-        <section className="w-1/2 space-y-8">
-          <p>
+    <div
+      id="connect"
+      className="space-y-6 bg-gray-50 px-4 sm:px-6 lg:px-30 py-12 md:py-20"
+    >
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium mb-6 md:mb-10">
+        Connect with Me
+      </h1>
+      <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-20">
+        <section className="w-full lg:w-1/2 space-y-6 md:space-y-8">
+          <p className="text-sm sm:text-base leading-relaxed">
             I'm always open to new opportunities, collaborations, or just a good
             conversation about tech and web development. Whether you have a
             project in mind, want to work together, or simply want to say hi —
             feel free to reach out!
           </p>
-          <section className="flex items-center gap-5 pl-2">
+          <section className="flex items-center gap-4 md:gap-5 pl-1 md:pl-2">
             <a href="https://www.linkedin.com/in/swarnim-ratna-shakya/">
-              <img src={linkedinIcon} alt="Linkedin icon" className="h-7 w-8" />
+              <img
+                src={linkedinIcon}
+                alt="Linkedin icon"
+                className="h-6 w-7 md:h-7 md:w-8"
+              />
             </a>
             <a href="https://github.com/swornims">
-              <img src={githubIcon} alt="Github icon" className="size-7" />
+              <img
+                src={githubIcon}
+                alt="Github icon"
+                className="size-6 md:size-7"
+              />
             </a>
           </section>
         </section>
-        <section className="w-1/2">
-          <form className="space-y-5" ref={form} onSubmit={sendEmail}>
-            <div className="flex gap-5">
-              <div className="space-y-2 w-1/2">
-                <label className="block text-lg">First Name</label>
+        <section className="w-full lg:w-1/2">
+          <form
+            className="space-y-4 md:space-y-5"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
+              <div className="space-y-2 w-full sm:w-1/2">
+                <label className="block text-base md:text-lg">First Name</label>
                 <input
                   type="text"
-                  name="first_name" // <-- add name attribute
-                  className="border w-full rounded-md py-1 px-4"
+                  name="first_name"
+                  className="border w-full rounded-md py-2 md:py-1 px-3 md:px-4 text-sm md:text-base"
                   required
                 />
               </div>
-              <div className="space-y-2 w-1/2">
-                <label className="block text-lg">Last Name</label>
+              <div className="space-y-2 w-full sm:w-1/2">
+                <label className="block text-base md:text-lg">Last Name</label>
                 <input
                   type="text"
-                  name="last_name" // <-- add name attribute
-                  className="border w-full rounded-md py-1 px-4"
+                  name="last_name"
+                  className="border w-full rounded-md py-2 md:py-1 px-3 md:px-4 text-sm md:text-base"
                   required
                 />
               </div>
             </div>
             <div className="space-y-2 w-full">
-              <label className="block text-lg">Email Address</label>
+              <label className="block text-base md:text-lg">
+                Email Address
+              </label>
               <input
                 type="email"
-                name="user_email" // <-- add name attribute
-                className="border w-full rounded-md py-1 px-4"
+                name="user_email"
+                className="border w-full rounded-md py-2 md:py-1 px-3 md:px-4 text-sm md:text-base"
                 required
               />
             </div>
             <div className="space-y-2">
-              <label className="block">Description</label>
+              <label className="block text-base md:text-lg">Description</label>
               <textarea
-                name="message" // <-- add name attribute
-                className="border rounded-md w-full h-28 py-1 px-4"
+                name="message"
+                className="border rounded-md w-full h-24 sm:h-28 py-2 md:py-1 px-3 md:px-4 text-sm md:text-base resize-vertical"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-gray-800 text-white px-8 py-2 rounded-md cursor-pointer "
+              className="bg-gray-800 text-white px-6 md:px-8 py-2 rounded-md cursor-pointer hover:bg-gray-700 transition-colors duration-300 text-sm md:text-base w-full sm:w-auto"
             >
               Get in touch
             </button>
